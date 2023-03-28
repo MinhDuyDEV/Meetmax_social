@@ -1,11 +1,19 @@
 import React from "react";
+import { Button } from "../../components/button";
+import CheckHaveAccount from "../../modules/authentication/CheckHaveAccount";
+import Title from "../../modules/authentication/Title";
 
 const CheckEmailPage = () => {
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quam
-      tempora, mollitia aliquam quas beatae similique rerum nisi amet, ipsa
-      animi magni sit quis quae eius dignissimos adipisci, reprehenderit id!
+    <div className="boxAuthentication max-w-[380px] md:max-w-[580px]">
+      <Title
+        heading="Check your email"
+        desc="We've sent a link to your email address: ahmed@gmail.com"
+      ></Title>
+      <Button type="button">Skip now</Button>
+      <CheckHaveAccount text="Didn't receive an email? " to="#">
+        Resend
+      </CheckHaveAccount>
     </div>
   );
 };

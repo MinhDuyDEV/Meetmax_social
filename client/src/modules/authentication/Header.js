@@ -12,8 +12,8 @@ const Header = () => {
         <img srcSet="/logo.png 4x" alt="logo" />
         <span className="font-bold text-heading3">Meetmax</span>
       </NavLink>
-      <div className="flex items-center justify-center gap-5 px-5 py-2 cursor-pointer boxChange">
-        <span className="text-opacity-60">English (UK)</span>
+      <div className="flex items-center justify-center gap-5 px-5 py-2 cursor-pointer boxChangeLanguage">
+        <span className="text-opacity-60 text-body14">English (UK)</span>
         <IconDown></IconDown>
       </div>
     </div>

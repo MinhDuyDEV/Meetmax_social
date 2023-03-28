@@ -5,6 +5,7 @@ import LayoutAuthentication from "./layouts/LayoutAuthentication";
 import SignInPage from "./Pages/authenticationPages/SignInPage";
 import SignUpPage from "./Pages/authenticationPages/SignUpPage";
 import ForgotPasswordPage from "./Pages/authenticationPages/ForgotPasswordPage";
+import CheckEmailPage from "./Pages/authenticationPages/CheckEmailPage";
 
 const App = () => {
   return (
@@ -17,6 +18,10 @@ const App = () => {
             <Route
               path="/forgot-password"
               element={<ForgotPasswordPage></ForgotPasswordPage>}
+            ></Route>
+            <Route
+              path="/check-email"
+              element={<CheckEmailPage></CheckEmailPage>}
             ></Route>
           </Route>
         </Routes>
