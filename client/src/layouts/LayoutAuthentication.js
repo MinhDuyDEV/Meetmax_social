@@ -1,7 +1,14 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../modules/authentication/Header";
 
 const LayoutAuthentication = () => {
-  return <div>from layout authentication</div>;
+  return (
+    <div className="min-h-100vh bg-authentication hiddenScroll">
+      <Header></Header>
+      <Outlet></Outlet>
+    </div>
+  );
 };
 
 export default LayoutAuthentication;

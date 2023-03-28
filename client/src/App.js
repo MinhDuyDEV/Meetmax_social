@@ -1,8 +1,9 @@
 import React, { Fragment, Suspense } from "react";
+import "./assets/styles/app.scss";
 import { Route, Routes } from "react-router-dom";
 import LayoutAuthentication from "./layouts/LayoutAuthentication";
-import SignInPage from "./Pages/auththenticationPages/SignInPage";
-import SignUpPage from "./Pages/auththenticationPages/SignUpPage";
+import SignInPage from "./Pages/authenticationPages/SignInPage";
+import SignUpPage from "./Pages/authenticationPages/SignUpPage";
 
 const App = () => {
   return (

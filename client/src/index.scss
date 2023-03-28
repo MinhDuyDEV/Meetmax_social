@@ -5,5 +5,13 @@
 
 * {
   font-family: "Roboto", sans-serif;
-  @apply font-medium text-display text-gray p-0 m-0 box-border;
+}
+body {
+  @apply font-medium text-display text-gray p-0 box-border max-w-[1440px] min-h-full m-auto;
+  // overflow-y: hidden; /* Hide vertical scrollbar */
+  // overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
 }
