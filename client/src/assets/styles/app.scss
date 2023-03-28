@@ -12,14 +12,6 @@
   backdrop-filter: blur(150px);
 }
 
-.hiddenScroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.hiddenScroll::-webkit-scrollbar {
-  display: none;
-}
-
 .boxAuthentication {
   box-shadow: 3px -5px 35px rgba(205, 205, 212, 0.1);
   border-radius: 20px;

@@ -94,7 +94,7 @@ const SignUpPage = () => {
             </Input>
             {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
           </GroupForm>
-          <GroupForm className={errors.email && "mb-[14px]"}>
+          <GroupForm className={errors.name && "mb-[14px]"}>
             <Input
               placeholder="Your Name"
               name="name"
@@ -126,7 +126,6 @@ const SignUpPage = () => {
                 errors.date && "mb-[6px]"
               }`}
             >
-              {/* <GroupForm className={errors.date && "mb-[14px]"}> */}
               <Input
                 placeholder="Date of birth"
                 name="date"
@@ -136,7 +135,6 @@ const SignUpPage = () => {
               >
                 <IconCalender></IconCalender>
               </Input>
-              {/* </GroupForm> */}
               <div className="flex items-center border-opacity-20 md:w-2/4 pl-[10px] md:pl-[18px] md:py-[14px] py-2 rounded-[10px] gap-x-[18px] border border-gray transition-all w-full">
                 <div className="flex items-center gap-x-5">
                   {watchGender === "male" ? <IconMale></IconMale> : null}
