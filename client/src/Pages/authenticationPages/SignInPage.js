@@ -87,7 +87,7 @@ const SignInPage = () => {
               <ErrorText>{errors.password.message}</ErrorText>
             )}
           </GroupForm>
-          <div className="flex items-center justify-between mb-[30px] px-5">
+          <div className="flex items-center justify-between mb-[20px] md:mb-[30px] px-3 md:px-5">
             <Checkbox
               name="remember"
               text="Remember me"
@@ -103,7 +103,7 @@ const SignInPage = () => {
           <Button type="submit">Sign In</Button>
         </form>
         <CheckHaveAccount text="You haven't any account? " to="/sign-up">
-          Sign In
+          Sign Up
         </CheckHaveAccount>
       </div>
     </div>
