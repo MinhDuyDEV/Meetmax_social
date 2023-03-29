@@ -1,5 +1,5 @@
 import React from "react";
-import { IconSearch } from "../assets/icons";
+import { IconSearch } from "../../assets/icons";
 
 const SearchBar = ({ placeholder = "Search for something here..." }) => {
   return (

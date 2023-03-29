@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../modules/authentication/Header";
+import Header from "../modules/dashboard/Header";
 
 const LayoutAuthentication = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import { IconMessage } from "../../assets/icons";
-import Avatar from "../Avatar";
-import Logo from "../Logo";
-import SearchBar from "../SearchBar";
+import Avatar from "../utils/Avatar";
+import Logo from "../utils/Logo";
+import SearchBar from "../utils/SearchBar";
 
 const Header = () => {
   return (
