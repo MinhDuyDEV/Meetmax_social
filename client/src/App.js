@@ -6,6 +6,7 @@ import SignInPage from "./Pages/authenticationPages/SignInPage";
 import SignUpPage from "./Pages/authenticationPages/SignUpPage";
 import ForgotPasswordPage from "./Pages/authenticationPages/ForgotPasswordPage";
 import CheckEmailPage from "./Pages/authenticationPages/CheckEmailPage";
+import LayoutHomePage from "./layouts/LayoutDashboard";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
               element={<CheckEmailPage></CheckEmailPage>}
             ></Route>
           </Route>
+          <Route path="/" element={<LayoutHomePage></LayoutHomePage>}></Route>
         </Routes>
       </Suspense>
     </Fragment>
