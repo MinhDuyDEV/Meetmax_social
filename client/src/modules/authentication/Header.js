@@ -1,6 +1,6 @@
 import React from "react";
 import { IconDown } from "../../assets/icons";
-import Logo from "../Logo";
+import Logo from "../utils/Logo";
 
 const Header = () => {
   return (

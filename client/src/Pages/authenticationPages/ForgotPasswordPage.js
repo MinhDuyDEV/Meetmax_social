@@ -8,7 +8,7 @@ import { Input } from "../../components/input";
 import { IconMail } from "../../assets/icons";
 import ErrorText from "../../modules/authentication/ErrorText";
 import { Button } from "../../components/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const schema = yup
   .object()
@@ -21,6 +21,7 @@ const schema = yup
   .required();
 
 const ForgotPasswordPage = () => {
+  const navigate = useNavigate();
   const {
     handleSubmit,
     control,
@@ -51,7 +52,9 @@ const ForgotPasswordPage = () => {
             </Input>
             {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
           </GroupForm>
-          <Button type="submit">Send</Button>
+          <Button type="submit" onClick={() => navigate("/check-email")}>
+            Send
+          </Button>
         </form>
         <Link
           to="/sign-in"

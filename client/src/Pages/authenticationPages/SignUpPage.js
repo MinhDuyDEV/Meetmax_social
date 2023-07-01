@@ -41,11 +41,16 @@ const schema = yup
         }
       )
       .required("Please enter your password"),
+    passwordConfirm: yup
+      .string()
+      .min(8, "Your password must be at least 8 characters or greater")
+      .oneOf([yup.ref("password")], "Passwords does not match")
+      .required("Please enter your password confirm."),
     gender: yup
       .string()
       .required("Please select your gender")
       .oneOf(["male", "female"], "You can only select male or female"),
-    date: yup.string().required("Please enter your birthday."),
+    birthDate: yup.string().required("Please enter your birthday."),
   })
   .required();
 
@@ -62,8 +67,8 @@ const SignUpPage = () => {
       gender: "male",
     },
   });
-  const handleSignUp = (values) => {
-    console.log("🚀 ~ handleSignUp ~ values:", values);
+  const handleSignUp = async (value) => {
+    console.log("🚀 ~ handleSignUp ~ values:", value);
   };
   const watchGender = watch("gender");
   return (
@@ -120,18 +125,35 @@ const SignUpPage = () => {
               <ErrorText>{errors.password.message}</ErrorText>
             )}
           </GroupForm>
+          <GroupForm className={errors.passwordConfirm && "mb-[14px]"}>
+            <Input
+              placeholder="Password Confirm"
+              name="passwordConfirm"
+              type="password"
+              iconPassword
+              control={control}
+              className={
+                errors.passwordConfirm && "border-red focus:border-red"
+              }
+            >
+              <IconLock></IconLock>
+            </Input>
+            {errors.passwordConfirm && (
+              <ErrorText>{errors.passwordConfirm.message}</ErrorText>
+            )}
+          </GroupForm>
           <div className="mb-[20px] md:mb-[30px] ">
             <div
               className={`items-center w-full lg:flex gap-x-5 ${
-                errors.date && "mb-[6px]"
+                errors.birthDate && "mb-[6px]"
               }`}
             >
               <Input
                 placeholder="Date of birth"
-                name="date"
+                name="birthDate"
                 type="text"
                 control={control}
-                className={errors.date && "border-red focus:border-red"}
+                className={errors.birthDate && "border-red focus:border-red"}
               >
                 <IconCalender></IconCalender>
               </Input>
@@ -165,7 +187,9 @@ const SignUpPage = () => {
                 </div>
               </div>
             </div>
-            {errors.date && <ErrorText>{errors.date.message}</ErrorText>}
+            {errors.birthDate && (
+              <ErrorText>{errors.birthDate.message}</ErrorText>
+            )}
           </div>
           <Button type="submit">Sign Up</Button>
         </form>

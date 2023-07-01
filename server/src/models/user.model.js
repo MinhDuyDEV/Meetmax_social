@@ -8,6 +8,11 @@ const userSchema = new mongoose.Schema({
     enum: ["male", "female"],
   },
   passwordConfirm: String,
+  active: {
+    type: Boolean,
+    default: true,
+    select: false,
+  },
 });
 
 const User = mongoose.model("User", userSchema);

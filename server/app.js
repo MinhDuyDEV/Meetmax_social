@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const authRouter = require("./src/routes/auth.route");
 const userRouter = require("./src/routes/user.route");
 
 const app = express();
@@ -14,9 +15,10 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/users", userRouter);
+// app.use("/signup", authRouter);
 
-app.all("*", (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
-});
+// app.all("*", (req, res, next) => {
+//   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+// });
 
 module.exports = app;

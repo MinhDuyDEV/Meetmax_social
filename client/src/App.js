@@ -25,7 +25,7 @@ const App = () => {
               element={<CheckEmailPage></CheckEmailPage>}
             ></Route>
           </Route>
-          <Route path="/" element={<LayoutHomePage></LayoutHomePage>}></Route>
+          <Route element={<LayoutHomePage></LayoutHomePage>}></Route>
         </Routes>
       </Suspense>
     </Fragment>
